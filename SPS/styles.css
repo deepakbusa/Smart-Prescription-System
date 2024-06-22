@@ -1,0 +1,387 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222227;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 10px;
+    z-index: -1;
+    transition: transform 6s linear infinite;
+    background: linear-gradient(45deg, #007bff, #28a745);
+    opacity: 0.8;
+}
+
+.container::after {
+    background: linear-gradient(135deg, #007bff, #28a745);
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.container:hover::before,
+.container:hover::after {
+    transform: rotate(360deg);
+}
+
+.container:hover header p {
+    color: #c8c1c9; /* Light red color on hover */
+}
+
+header h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+header p {
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 18px;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn.doctor {
+    background-color: #007bff;
+}
+
+.btn.doctor:hover {
+    background-color: #0056b3;
+}
+
+.btn.pharmacy {
+    background-color: #28a745;
+}
+
+.btn.pharmacy:hover {
+    background-color: #1e7e34;
+}
+
+.move-to-me {
+    position: fixed;
+    bottom: 190px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.move-to-me span {
+    color: #333; /* Adjust text color */
+    font-size: 12px; /* Adjust text size */
+    font-weight: bold;
+}
+
+.circle-photo {
+    position: fixed;
+    bottom: 80px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 999; /* Ensure it's above other elements */
+    transition: transform 0.3s ease-in-out;
+}
+
+.circle-photo img {
+    width: 140px; /* Adjust the size of the circular photo */
+    height: 140px;
+    border-radius: 50%; /* This creates the circular shape */
+    border: 2px solid #f4f0f0; /* Optional: Add a white border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), /* Optional: Add a shadow */
+                0 0 20px rgba(255, 255, 255, 0.5), /* Add a shining effect */
+                0 0 30px rgba(255, 255, 255, 0.3), /* Decrease intensity */
+                0 0 40px rgba(255, 255, 255, 0.2), /* Decrease intensity further */
+                0 0 50px rgba(255, 255, 255, 0.1); /* Decrease intensity even further */
+    transition: transform 0.3s ease-in-out;
+    animation: shine 2s infinite; /* Add animation to make it shine */
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+                    0 0 20px rgba(255, 255, 255, 0.5),
+                    0 0 30px rgba(255, 255, 255, 0.3),
+                    0 0 40px rgba(255, 255, 255, 0.2),
+                    0 0 50px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+                    0 0 25px rgba(255, 255, 255, 0.6),
+                    0 0 35px rgba(255, 255, 255, 0.4),
+                    0 0 45px rgba(255, 255, 255, 0.3),
+                    0 0 55px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+                    0 0 20px rgba(255, 255, 255, 0.5),
+                    0 0 30px rgba(255, 255, 255, 0.3),
+                    0 0 40px rgba(255, 255, 255, 0.2),
+                    0 0 50px rgba(255, 255, 255, 0.1);
+    }
+}
+.details-box {
+    position: fixed;
+    bottom: 84.3px; /* Adjust to align with photo */
+    left: calc(50% - 70px); /* Adjust as needed */
+    width: 143.2px; /* Match the photo's size initially */
+    height: 143.2px; /* Match the photo's size initially */
+    background-color: #7ea6c5; /* Light gray background */
+    overflow: hidden;
+    z-index: 998; /* Ensure it's behind the circular photo */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Added left for animation */
+    padding-inline-start: 85px;
+    padding-inline-end: 15px;
+    box-sizing: border-box;
+    visibility: hidden; /* Initially hidden */
+    border-radius: 10px; /* Add a slight curve to the box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+.details-box {
+    /*... */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.details-box.active {
+    opacity: 1; /* Fade in */
+    /*... */
+}
+.details-box.active {
+    width: 500px; /* Adjust the width as needed */
+    visibility: visible; /* Show details box */
+    left: calc(50% - 170px); /* Move box to the left of the photo */
+}
+
+
+
+.move-to-me {
+    position: fixed;
+    bottom: 240px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff; /* White background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: opacity 0.3s ease-in-out;
+}
+.contact-details {
+    position: fixed;
+    bottom: 3px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 5px;
+    padding-bottom: 3px;
+    background-color: rgba(255, 255, 255, 0.7); /* White background with 70% opacity */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other elements */
+    width: 255px; /* Set a fixed width */
+    height: 70px;
+    text-align: center; /* Center the content */
+    box-sizing: border-box; /* Include padding in the width */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    justify-content: center;
+    align-items: center;
+}
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+    gap: 30px;
+    width: 100%;
+}
+.icon {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.icon.instagram:hover {
+    color: #E1306C;
+}
+
+.icon.linkedin:hover {
+    color: #0077B5;
+}
+
+.icon.gmail:hover {
+    color: #D44638;
+}
+/* ... existing styles ... */
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 768px) {
+    /* Adjust container width and padding */
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    /* Adjust button styles */
+    .btn {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    /* Adjust circular photo styles */
+    .circle-photo {
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+    }
+  
+    .circle-photo img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    /* Adjust details box styles */
+    .details-box {
+      bottom: 60px;
+      left: calc(50% - 70px);
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+    }
+  
+    /* Adjust move-to-me styles */
+    .move-to-me {
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 10px;
+    }
+  
+    /* Adjust contact details styles */
+    .contact-details {
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 10px;
+      width: 200px;
+      height: 50px;
+    }
+  
+    /* Adjust social icons styles */
+    .social-icons {
+      gap: 20px;
+    }
+  
+    .icon {
+      font-size: 1.2em;
+    }
+  }
+  
+  /* Media queries for smaller mobile devices */
+  @media only screen and (max-width: 480px) {
+    /* Adjust container width and padding */
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    /* Adjust button styles */
+    .btn {
+      padding: 8px 15px;
+      font-size: 12px;
+    }
+  
+    /* Adjust circular photo styles */
+    .circle-photo {
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 80px;
+    }
+  
+    .circle-photo img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    /* Adjust details box styles */
+    .details-box {
+      bottom: 50px;
+      left: calc(50% - 60px);
+      width: 150px;
+      height: 150px;
+      padding: 8px;
+    }
+  
+    /* Adjust move-to-me styles */
+    .move-to-me {
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px 8px;
+    }
+  
+    /* Adjust contact details styles */
+    .contact-details {
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px 8px;
+      width: 150px;
+      height: 40px;
+    }
+  
+    /* Adjust social icons styles */
+    .social-icons {
+      gap: 15px;
+    }
+  
+    .icon {
+      font-size: 1em;
+    }
+  }

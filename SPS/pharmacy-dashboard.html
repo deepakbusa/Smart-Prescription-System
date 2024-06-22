@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Dashboard - Smart Prescription System</title>
+    <link rel="stylesheet" href="pharmacy-dashboard.css">
+    <link rel="icon" href="icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-/QdZY6PQHO7BDaAz3ku3j7ydnM2xHnd4k7l8zQFJDjBxq1L3xjli0lJFk2tG+Z8Qs8VGsL2ynYlM6cPAl3V0bA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Pharmacy Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="logout" ><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="body-content">
+            <p style="color: #28a745; font-size: 24px; margin-top: 30px;">Welcome, [Pharmacy Name]</p>
+            <p style="color: #28a745; font-size: 20px;">Here is your dashboard overview.</p>
+        </div>
+        <section class="dashboard-content">
+            <a href="new-tablets.html" class="dashboard-button" id="newTablets">
+                <h2>Add Tablets</h2>
+                <p>Add new tablets to your inventory.</p>
+            </a>
+            <a href="orders-list.html" class="dashboard-button" id="viewOrders">
+                <h2>View Orders</h2>
+                <p>View and manage incoming orders.</p>
+            </a>
+            <a href="tablets-list.html" class="dashboard-button" id="tabletsList">
+                <h2>Tablets List</h2>
+                <p>View and manage your current tablet inventory.</p>
+            </a>
+        </section>
+    </div>
+    <script src="pharmacy-dashboard.js"></script>
+</body>
+</html>

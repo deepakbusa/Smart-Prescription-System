@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222227;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222227;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Remove margin from the first child to align logout button to the right */
+}
+
+nav ul li a {
+    color: #28a745; /* Set initial color */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    background-color: transparent; /* Set transparent background */
+    border: 1px solid #28a745; /* Add border */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Change text color to white on hover */
+    background-color: #28a745; /* Change background color to present color on hover */
+}
+
+.container {
+    padding: 20px;
+}
+
+.body-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-content {
+    text-align: center;
+}
+
+.dashboard-button {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #007bff, #28a745);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit maximum width */
+    margin: 20px auto; /* Center align and add margin */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-button h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.dashboard-button p {
+    font-size: 16px;
+}

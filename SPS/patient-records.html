@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Records - Smart Prescription System</title>
+    <link rel="icon" href="icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="patient-records.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-/QdZY6PQHO7BDaAz3ku3j7ydnM2xHnd4k7l8zQFJDjBxq1L3xjli0lJFk2tG+Z8Qs8VGsL2ynYlM6cPAl3V0bA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Patient Records</h1>
+        <nav>
+            <ul>
+                <li><a href="doctor-dashboard.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Attended Patients</h2>
+        <table class="patient-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="attendedPatientsTableBody">
+                <!-- Attended patient rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+        
+        <h2>Upcoming Patients</h2>
+        <table class="patient-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="upcomingPatientsTableBody">
+                <!-- Upcoming patient rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="patient-records.js"></script>
+</body>
+</html>

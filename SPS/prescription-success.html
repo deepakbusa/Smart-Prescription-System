@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Successful</title>
+    <link rel="icon" href="icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="prescription-success.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body style="background-color: #222227;">
+    <div class="container">
+        <h1 style="color: #007bff;">Prescription Successful</h1>
+        <div class="bill">
+            <h2>Prescription Details</h2>
+            <div class="details">
+                <p><strong>Patient Name:</strong> <span id="patientName"></span></p>
+                <p><strong>Patient Number:</strong> <span id="patientNumber"></span></p>
+                <p><strong>Room Number:</strong> <span id="roomNumber"></span></p>
+                <p><strong>Selected Tablets:</strong></p>
+                <ul id="selectedTablets"></ul>
+                <p><strong>Days:</strong> <span id="days"></span></p>
+                <p><strong>Total Cost:</strong> <span id="totalCost"></span></p>
+                <p><strong>Payment Method:</strong> <span id="paymentMethod"></span></p>
+                <p><strong>Doctor's Name:</strong> <span id="doctorName"></span></p>
+                <p><strong>Doctor's Email:</strong> <span id="doctorEmail"></span></p>
+                <p><strong>Clinic Name:</strong> <span id="clinicName"></span></p>
+            </div>
+            <img src="payment-success.png" alt="Payment Successful" class="payment-success-logo">
+        </div>
+        <hr>
+        <div class="actions">
+            <button id="viewStatusButton" class="action-button">View Prescription Status</button>
+            <button id="dashboardButton" class="action-button">Move to Dashboard</button>
+            <button id="downloadButton" class="action-button">Download Bill</button>
+        </div>
+    </div>
+
+    <script src="prescription-success.js"></script>
+</body>
+</html>

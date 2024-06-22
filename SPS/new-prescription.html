@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Prescription - Smart Prescription System</title>
+    <link rel="icon" href="icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="new-prescription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-/QdZY6PQHO7BDaAz3ku3j7ydnM2xHnd4k7l8zQFJDjBxq1L3xjli0lJFk2tG+Z8Qs8VGsL2ynYlM6cPAl3V0bA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <h1>Smart Prescription System</h1>
+    </div>
+    <div class="container">
+        <h2>New Prescription</h2>
+        <form id="prescriptionForm" action="#">
+            <div class="form-section">
+                <h3>Patient Information</h3>
+                <div class="form-group">
+                    <label for="patientName">Patient Name:</label>
+                    <input type="text" id="patientName" name="patientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="patientNumber">Patient Number:</label>
+                    <input type="tel" id="patientNumber" name="patientNumber" pattern="[0-9]{10}" required>
+                    <small>Format: 10 digits</small>
+                </div>
+                <div class="form-group">
+                    <label for="roomNumber">Room Number:</label>
+                    <input type="text" id="roomNumber" name="roomNumber">
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Prescription Details</h3>
+                <div class="form-group">
+                    <label for="selectTablets">Select Tablets:</label>
+                    <input type="text" id="selectTablets" name="selectTablets" placeholder="Enter tablet names">
+                    <ul id="filteredTablets" class="tablet-list"></ul>
+                </div>
+                <h3>Selected Tablets:</h3> <!-- Updated label for selected tablets -->
+                <ul id="selectedTablets" class="tablet-list"></ul>
+                <div class="form-group">
+                    <label for="days">Days:</label>
+                    <input type="number" id="days" name="days" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="totalCost">Total Cost:</label>
+                    <input type="text" id="totalCost" name="totalCost" readonly value="₹0">
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">--Select payment method--</option>
+                        <option value="cash">Cash</option>
+                        <option value="card">Card</option>
+                        <option value="online">Online</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Doctor's Information</h3>
+                <div class="form-group">
+                    <label for="doctorName">Doctor's Name:</label>
+                    <input type="text" id="doctorName" name="doctorName" value="Dr. John Doe" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="doctorEmail">Doctor's Email:</label>
+                    <input type="email" id="doctorEmail" name="doctorEmail" value="john.doe@example.com" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="clinicName">Clinic Name:</label>
+                    <input type="text" id="clinicName" name="clinicName" value="ABC Clinic" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Prescription</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="new-prescription.js"></script>
+</body>
+</html>

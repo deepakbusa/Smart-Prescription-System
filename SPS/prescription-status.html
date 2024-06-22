@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Status - Smart Prescription System</title>
+    <link rel="icon" href="icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="prescription-status.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Prescription Status</h1>
+    </div>
+    <div class="container">
+        <div class="status">
+            <div class="status-item completed">
+                <span class="emoji">📝</span>
+                <span class="status-text">Prescription Generated</span>
+            </div>
+            <div class="status-item completed">
+                <span class="emoji">💊</span>
+                <span class="status-text">Tablets Packing</span>
+            </div>
+            <div class="status-item current">
+                <span class="emoji">📦</span>
+                <span class="status-text">Shipping</span>
+            </div>
+            <div class="status-item">
+                <span class="emoji">✅</span>
+                <span class="status-text">Order Successful</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="goBackButton">Go Back</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('goBackButton').addEventListener('click', function() {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222227;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Add this line to position the home button */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    max-width: 90%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+header p {
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group label {
+    margin-right: 10px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 280px;
+    transition: background-color 0.3s;
+}
+
+.social-btn.google {
+    background-color: #db4437;
+}
+
+.social-btn.google:hover {
+    background-color: #c23321;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn.facebook:hover {
+    background-color: #2d4373;
+}
+
+.social-btn.github {
+    background-color: #333;
+}
+
+.social-btn.github:hover {
+    background-color: #24292e;
+}
+
+.social-btn i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.home-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+    }
+
+    .home-btn {
+        padding: 8px 16px;
+    }
+}

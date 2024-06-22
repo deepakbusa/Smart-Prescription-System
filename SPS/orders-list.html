@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders List - Smart Prescription System</title>
+    <link rel="icon" href="icon.webp" type="image/icon type">
+    <link rel="stylesheet" href="orders-list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-/QdZY6PQHO7BDaAz3ku3j7ydnM2xHnd4k7l8zQFJDjBxq1L3xjli0lJFk2tG+Z8Qs8VGsL2ynYlM6cPAl3V0bA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Orders List</h1>
+        <nav>
+            <ul>
+                <li><a href="pharmacy-dashboard.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Current Orders</h2>
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient Name</th>
+                    <th>Patient Number</th>
+                    <th>Room Number</th>
+                    <th>Selected Tablets</th>
+                    <th>Days</th>
+                    <th>Total Cost</th>
+                    <th>Payment Method</th>
+                    <th>Doctor's Name</th>
+                    <th>Doctor's Email</th>
+                    <th>Clinic Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="currentOrdersTableBody">
+                <!-- Order rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="orders-list.js"></script>
+</body>
+</html>
